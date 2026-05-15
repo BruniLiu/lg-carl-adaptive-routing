@@ -38,6 +38,22 @@ htmlcov/
 *.log
 logs/
 data/logs/
+*.zip
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
 
 # ML experiment outputs and model checkpoints
 results/
@@ -57,4 +73,3 @@ checkpoints/
 Thumbs.db
 .idea/
 .vscode/
-
