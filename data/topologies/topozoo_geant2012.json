@@ -1,0 +1,796 @@
+{
+  "name": "geant2012",
+  "source": "topohub",
+  "topohub_id": "topozoo/Geant2012",
+  "directed": false,
+  "nodes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36
+  ],
+  "node_metadata": [
+    {
+      "id": 0,
+      "original_id": "0",
+      "name": "NL",
+      "pos": [
+        4.89,
+        52.37
+      ]
+    },
+    {
+      "id": 1,
+      "original_id": "1",
+      "name": "BE",
+      "pos": [
+        4.35,
+        50.85
+      ]
+    },
+    {
+      "id": 2,
+      "original_id": "12",
+      "name": "BG",
+      "pos": [
+        23.32,
+        42.7
+      ]
+    },
+    {
+      "id": 3,
+      "original_id": "13",
+      "name": "RO",
+      "pos": [
+        26.11,
+        44.43
+      ]
+    },
+    {
+      "id": 4,
+      "original_id": "14",
+      "name": "TR",
+      "pos": [
+        34.91,
+        39.06
+      ]
+    },
+    {
+      "id": 5,
+      "original_id": "15",
+      "name": "GR",
+      "pos": [
+        23.72,
+        37.98
+      ]
+    },
+    {
+      "id": 6,
+      "original_id": "16",
+      "name": "CY",
+      "pos": [
+        33.37,
+        35.17
+      ]
+    },
+    {
+      "id": 7,
+      "original_id": "17",
+      "name": "IL",
+      "pos": [
+        34.75,
+        31.5
+      ]
+    },
+    {
+      "id": 8,
+      "original_id": "18",
+      "name": "MT",
+      "pos": [
+        14.43,
+        35.91
+      ]
+    },
+    {
+      "id": 9,
+      "original_id": "2",
+      "name": "DK",
+      "pos": [
+        12.57,
+        55.68
+      ]
+    },
+    {
+      "id": 10,
+      "original_id": "20",
+      "name": "MK",
+      "pos": [
+        21.43,
+        42.0
+      ]
+    },
+    {
+      "id": 11,
+      "original_id": "21",
+      "name": "ME",
+      "pos": [
+        19.26,
+        42.44
+      ]
+    },
+    {
+      "id": 12,
+      "original_id": "22",
+      "name": "HU",
+      "pos": [
+        19.04,
+        47.5
+      ]
+    },
+    {
+      "id": 13,
+      "original_id": "23",
+      "name": "SK",
+      "pos": [
+        17.11,
+        48.15
+      ]
+    },
+    {
+      "id": 14,
+      "original_id": "24",
+      "name": "PT",
+      "pos": [
+        -9.13,
+        38.72
+      ]
+    },
+    {
+      "id": 15,
+      "original_id": "25",
+      "name": "ES",
+      "pos": [
+        -3.7,
+        40.42
+      ]
+    },
+    {
+      "id": 16,
+      "original_id": "26",
+      "name": "RS",
+      "pos": [
+        20.47,
+        44.8
+      ]
+    },
+    {
+      "id": 17,
+      "original_id": "27",
+      "name": "HR",
+      "pos": [
+        15.98,
+        45.81
+      ]
+    },
+    {
+      "id": 18,
+      "original_id": "28",
+      "name": "SL",
+      "pos": [
+        14.51,
+        46.05
+      ]
+    },
+    {
+      "id": 19,
+      "original_id": "29",
+      "name": "AT",
+      "pos": [
+        16.37,
+        48.21
+      ]
+    },
+    {
+      "id": 20,
+      "original_id": "3",
+      "name": "PL",
+      "pos": [
+        16.97,
+        52.42
+      ]
+    },
+    {
+      "id": 21,
+      "original_id": "30",
+      "name": "LT",
+      "pos": [
+        23.9,
+        54.9
+      ]
+    },
+    {
+      "id": 22,
+      "original_id": "31",
+      "name": "RU",
+      "pos": [
+        37.62,
+        55.75
+      ]
+    },
+    {
+      "id": 23,
+      "original_id": "32",
+      "name": "IS",
+      "pos": [
+        -21.9,
+        64.14
+      ]
+    },
+    {
+      "id": 24,
+      "original_id": "33",
+      "name": "IE",
+      "pos": [
+        -6.27,
+        53.34
+      ]
+    },
+    {
+      "id": 25,
+      "original_id": "34",
+      "name": "UK",
+      "pos": [
+        -0.13,
+        51.51
+      ]
+    },
+    {
+      "id": 26,
+      "original_id": "35",
+      "name": "NO",
+      "pos": [
+        10.0,
+        62.0
+      ]
+    },
+    {
+      "id": 27,
+      "original_id": "36",
+      "name": "SE",
+      "pos": [
+        18.06,
+        59.33
+      ]
+    },
+    {
+      "id": 28,
+      "original_id": "37",
+      "name": "FI",
+      "pos": [
+        22.27,
+        60.45
+      ]
+    },
+    {
+      "id": 29,
+      "original_id": "38",
+      "name": "EE",
+      "pos": [
+        24.75,
+        59.44
+      ]
+    },
+    {
+      "id": 30,
+      "original_id": "39",
+      "name": "LV",
+      "pos": [
+        24.11,
+        56.95
+      ]
+    },
+    {
+      "id": 31,
+      "original_id": "4",
+      "name": "DE",
+      "pos": [
+        8.68,
+        50.12
+      ]
+    },
+    {
+      "id": 32,
+      "original_id": "5",
+      "name": "CZ",
+      "pos": [
+        14.42,
+        50.09
+      ]
+    },
+    {
+      "id": 33,
+      "original_id": "6",
+      "name": "LU",
+      "pos": [
+        6.13,
+        49.61
+      ]
+    },
+    {
+      "id": 34,
+      "original_id": "7",
+      "name": "FR",
+      "pos": [
+        2.35,
+        48.85
+      ]
+    },
+    {
+      "id": 35,
+      "original_id": "8",
+      "name": "CH",
+      "pos": [
+        7.45,
+        46.95
+      ]
+    },
+    {
+      "id": 36,
+      "original_id": "9",
+      "name": "IT",
+      "pos": [
+        9.19,
+        45.46
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1,
+      "capacity": 200.0,
+      "base_delay": 1.8677,
+      "distance_km": 173.53
+    },
+    {
+      "source": 0,
+      "target": 9,
+      "capacity": 200.0,
+      "base_delay": 4.1052,
+      "distance_km": 621.04
+    },
+    {
+      "source": 0,
+      "target": 31,
+      "capacity": 141.3428,
+      "base_delay": 2.8217,
+      "distance_km": 364.34
+    },
+    {
+      "source": 0,
+      "target": 25,
+      "capacity": 200.0,
+      "base_delay": 2.7851,
+      "distance_km": 357.03
+    },
+    {
+      "source": 0,
+      "target": 21,
+      "capacity": 200.0,
+      "base_delay": 7.4023,
+      "distance_km": 1280.45
+    },
+    {
+      "source": 1,
+      "target": 24,
+      "capacity": 200.0,
+      "base_delay": 4.8783,
+      "distance_km": 775.67
+    },
+    {
+      "source": 9,
+      "target": 23,
+      "capacity": 200.0,
+      "base_delay": 11.5239,
+      "distance_km": 2104.79
+    },
+    {
+      "source": 9,
+      "target": 26,
+      "capacity": 200.0,
+      "base_delay": 4.593,
+      "distance_km": 718.59
+    },
+    {
+      "source": 9,
+      "target": 31,
+      "capacity": 83.4492,
+      "base_delay": 4.3536,
+      "distance_km": 670.71
+    },
+    {
+      "source": 9,
+      "target": 29,
+      "capacity": 200.0,
+      "base_delay": 5.1859,
+      "distance_km": 837.18
+    },
+    {
+      "source": 9,
+      "target": 27,
+      "capacity": 167.0844,
+      "base_delay": 3.6126,
+      "distance_km": 522.53
+    },
+    {
+      "source": 9,
+      "target": 22,
+      "capacity": 200.0,
+      "base_delay": 8.8049,
+      "distance_km": 1560.99
+    },
+    {
+      "source": 20,
+      "target": 31,
+      "capacity": 200.0,
+      "base_delay": 4.151,
+      "distance_km": 630.2
+    },
+    {
+      "source": 20,
+      "target": 32,
+      "capacity": 200.0,
+      "base_delay": 2.569,
+      "distance_km": 313.8
+    },
+    {
+      "source": 20,
+      "target": 21,
+      "capacity": 200.0,
+      "base_delay": 3.6681,
+      "distance_km": 533.63
+    },
+    {
+      "source": 31,
+      "target": 32,
+      "capacity": 197.4334,
+      "base_delay": 3.0461,
+      "distance_km": 409.23
+    },
+    {
+      "source": 31,
+      "target": 33,
+      "capacity": 200.0,
+      "base_delay": 1.9574,
+      "distance_km": 191.48
+    },
+    {
+      "source": 31,
+      "target": 35,
+      "capacity": 160.2136,
+      "base_delay": 2.8199,
+      "distance_km": 363.98
+    },
+    {
+      "source": 6,
+      "target": 31,
+      "capacity": 200.0,
+      "base_delay": 13.9732,
+      "distance_km": 2594.64
+    },
+    {
+      "source": 7,
+      "target": 31,
+      "capacity": 200.0,
+      "base_delay": 15.9412,
+      "distance_km": 2988.24
+    },
+    {
+      "source": 19,
+      "target": 31,
+      "capacity": 60.0,
+      "base_delay": 3.989,
+      "distance_km": 597.8
+    },
+    {
+      "source": 22,
+      "target": 31,
+      "capacity": 200.0,
+      "base_delay": 11.1057,
+      "distance_km": 2021.13
+    },
+    {
+      "source": 13,
+      "target": 32,
+      "capacity": 190.9612,
+      "base_delay": 2.4558,
+      "distance_km": 291.15
+    },
+    {
+      "source": 33,
+      "target": 34,
+      "capacity": 200.0,
+      "base_delay": 2.4363,
+      "distance_km": 287.25
+    },
+    {
+      "source": 34,
+      "target": 35,
+      "capacity": 200.0,
+      "base_delay": 3.1757,
+      "distance_km": 435.14
+    },
+    {
+      "source": 15,
+      "target": 34,
+      "capacity": 200.0,
+      "base_delay": 6.2637,
+      "distance_km": 1052.74
+    },
+    {
+      "source": 25,
+      "target": 34,
+      "capacity": 200.0,
+      "base_delay": 2.7193,
+      "distance_km": 343.87
+    },
+    {
+      "source": 35,
+      "target": 36,
+      "capacity": 200.0,
+      "base_delay": 2.0632,
+      "distance_km": 212.64
+    },
+    {
+      "source": 15,
+      "target": 35,
+      "capacity": 200.0,
+      "base_delay": 6.7613,
+      "distance_km": 1152.25
+    },
+    {
+      "source": 15,
+      "target": 36,
+      "capacity": 200.0,
+      "base_delay": 6.9423,
+      "distance_km": 1188.46
+    },
+    {
+      "source": 8,
+      "target": 36,
+      "capacity": 200.0,
+      "base_delay": 6.7511,
+      "distance_km": 1150.22
+    },
+    {
+      "source": 19,
+      "target": 36,
+      "capacity": 200.0,
+      "base_delay": 4.128,
+      "distance_km": 625.6
+    },
+    {
+      "source": 5,
+      "target": 36,
+      "capacity": 200.0,
+      "base_delay": 8.3092,
+      "distance_km": 1461.84
+    },
+    {
+      "source": 2,
+      "target": 12,
+      "capacity": 200.0,
+      "base_delay": 4.1541,
+      "distance_km": 630.83
+    },
+    {
+      "source": 2,
+      "target": 10,
+      "capacity": 200.0,
+      "base_delay": 1.8685,
+      "distance_km": 173.71
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "capacity": 200.0,
+      "base_delay": 2.4789,
+      "distance_km": 295.78
+    },
+    {
+      "source": 2,
+      "target": 4,
+      "capacity": 200.0,
+      "base_delay": 6.2702,
+      "distance_km": 1054.03
+    },
+    {
+      "source": 2,
+      "target": 5,
+      "capacity": 115.942,
+      "base_delay": 3.6291,
+      "distance_km": 525.82
+    },
+    {
+      "source": 3,
+      "target": 4,
+      "capacity": 200.0,
+      "base_delay": 5.7153,
+      "distance_km": 943.05
+    },
+    {
+      "source": 3,
+      "target": 12,
+      "capacity": 200.0,
+      "base_delay": 4.2181,
+      "distance_km": 643.62
+    },
+    {
+      "source": 5,
+      "target": 19,
+      "capacity": 141.4761,
+      "base_delay": 7.416,
+      "distance_km": 1283.2
+    },
+    {
+      "source": 6,
+      "target": 25,
+      "capacity": 200.0,
+      "base_delay": 17.095,
+      "distance_km": 3219.0
+    },
+    {
+      "source": 7,
+      "target": 21,
+      "capacity": 200.0,
+      "base_delay": 14.6996,
+      "distance_km": 2739.93
+    },
+    {
+      "source": 11,
+      "target": 17,
+      "capacity": 200.0,
+      "base_delay": 3.2885,
+      "distance_km": 457.71
+    },
+    {
+      "source": 12,
+      "target": 16,
+      "capacity": 200.0,
+      "base_delay": 2.5956,
+      "distance_km": 319.12
+    },
+    {
+      "source": 12,
+      "target": 17,
+      "capacity": 200.0,
+      "base_delay": 2.4973,
+      "distance_km": 299.47
+    },
+    {
+      "source": 12,
+      "target": 13,
+      "capacity": 140.5481,
+      "base_delay": 1.8073,
+      "distance_km": 161.46
+    },
+    {
+      "source": 13,
+      "target": 19,
+      "capacity": 200.0,
+      "base_delay": 1.2745,
+      "distance_km": 54.9
+    },
+    {
+      "source": 14,
+      "target": 15,
+      "capacity": 200.0,
+      "base_delay": 3.5122,
+      "distance_km": 502.45
+    },
+    {
+      "source": 14,
+      "target": 25,
+      "capacity": 200.0,
+      "base_delay": 8.9299,
+      "distance_km": 1585.99
+    },
+    {
+      "source": 17,
+      "target": 18,
+      "capacity": 200.0,
+      "base_delay": 1.5847,
+      "distance_km": 116.94
+    },
+    {
+      "source": 18,
+      "target": 19,
+      "capacity": 144.3001,
+      "base_delay": 2.3922,
+      "distance_km": 278.44
+    },
+    {
+      "source": 21,
+      "target": 30,
+      "capacity": 200.0,
+      "base_delay": 2.1397,
+      "distance_km": 227.93
+    },
+    {
+      "source": 23,
+      "target": 25,
+      "capacity": 200.0,
+      "base_delay": 10.4384,
+      "distance_km": 1887.68
+    },
+    {
+      "source": 24,
+      "target": 25,
+      "capacity": 200.0,
+      "base_delay": 3.3184,
+      "distance_km": 463.67
+    },
+    {
+      "source": 26,
+      "target": 27,
+      "capacity": 200.0,
+      "base_delay": 3.6482,
+      "distance_km": 529.65
+    },
+    {
+      "source": 27,
+      "target": 28,
+      "capacity": 200.0,
+      "base_delay": 2.3273,
+      "distance_km": 265.45
+    },
+    {
+      "source": 29,
+      "target": 30,
+      "capacity": 200.0,
+      "base_delay": 2.3982,
+      "distance_km": 279.65
+    }
+  ],
+  "demands": [],
+  "graph": {
+    "name": "geant2012",
+    "source": "topohub",
+    "topohub_id": "topozoo/Geant2012",
+    "num_demands": 0,
+    "avg_distance_km": 823.6486206896551
+  }
+}

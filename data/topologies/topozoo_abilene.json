@@ -1,0 +1,228 @@
+{
+  "name": "abilene",
+  "source": "topohub",
+  "topohub_id": "topozoo/Abilene",
+  "directed": false,
+  "nodes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "node_metadata": [
+    {
+      "id": 0,
+      "original_id": "0",
+      "name": "New York",
+      "pos": [
+        -74.01,
+        40.71
+      ]
+    },
+    {
+      "id": 1,
+      "original_id": "1",
+      "name": "Chicago",
+      "pos": [
+        -87.65,
+        41.85
+      ]
+    },
+    {
+      "id": 2,
+      "original_id": "10",
+      "name": "Indianapolis",
+      "pos": [
+        -86.16,
+        39.77
+      ]
+    },
+    {
+      "id": 3,
+      "original_id": "2",
+      "name": "Washington DC",
+      "pos": [
+        -77.04,
+        38.9
+      ]
+    },
+    {
+      "id": 4,
+      "original_id": "3",
+      "name": "Seattle",
+      "pos": [
+        -122.33,
+        47.61
+      ]
+    },
+    {
+      "id": 5,
+      "original_id": "4",
+      "name": "Sunnyvale",
+      "pos": [
+        -122.04,
+        37.37
+      ]
+    },
+    {
+      "id": 6,
+      "original_id": "5",
+      "name": "Los Angeles",
+      "pos": [
+        -118.24,
+        34.05
+      ]
+    },
+    {
+      "id": 7,
+      "original_id": "6",
+      "name": "Denver",
+      "pos": [
+        -104.98,
+        39.74
+      ]
+    },
+    {
+      "id": 8,
+      "original_id": "7",
+      "name": "Kansas City",
+      "pos": [
+        -94.63,
+        39.11
+      ]
+    },
+    {
+      "id": 9,
+      "original_id": "8",
+      "name": "Houston",
+      "pos": [
+        -95.36,
+        29.76
+      ]
+    },
+    {
+      "id": 10,
+      "original_id": "9",
+      "name": "Atlanta",
+      "pos": [
+        -84.39,
+        33.75
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1,
+      "capacity": 152.3229,
+      "base_delay": 6.7308,
+      "distance_km": 1146.16
+    },
+    {
+      "source": 0,
+      "target": 3,
+      "capacity": 180.018,
+      "base_delay": 2.6429,
+      "distance_km": 328.58
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "capacity": 79.1975,
+      "base_delay": 2.317,
+      "distance_km": 263.4
+    },
+    {
+      "source": 3,
+      "target": 10,
+      "capacity": 86.0832,
+      "base_delay": 5.3609,
+      "distance_km": 872.17
+    },
+    {
+      "source": 4,
+      "target": 5,
+      "capacity": 200.0,
+      "base_delay": 6.6946,
+      "distance_km": 1138.92
+    },
+    {
+      "source": 4,
+      "target": 7,
+      "capacity": 141.4427,
+      "base_delay": 9.2079,
+      "distance_km": 1641.58
+    },
+    {
+      "source": 5,
+      "target": 6,
+      "capacity": 123.7624,
+      "base_delay": 3.5165,
+      "distance_km": 503.3
+    },
+    {
+      "source": 5,
+      "target": 7,
+      "capacity": 159.2779,
+      "base_delay": 8.5201,
+      "distance_km": 1504.02
+    },
+    {
+      "source": 6,
+      "target": 9,
+      "capacity": 82.4969,
+      "base_delay": 12.0369,
+      "distance_km": 2207.38
+    },
+    {
+      "source": 7,
+      "target": 8,
+      "capacity": 60.0,
+      "base_delay": 5.4603,
+      "distance_km": 892.06
+    },
+    {
+      "source": 8,
+      "target": 9,
+      "capacity": 117.3709,
+      "base_delay": 6.2112,
+      "distance_km": 1042.24
+    },
+    {
+      "source": 2,
+      "target": 8,
+      "capacity": 60.0,
+      "base_delay": 4.6543,
+      "distance_km": 730.85
+    },
+    {
+      "source": 9,
+      "target": 10,
+      "capacity": 70.713,
+      "base_delay": 6.6394,
+      "distance_km": 1127.88
+    },
+    {
+      "source": 2,
+      "target": 10,
+      "capacity": 123.7624,
+      "base_delay": 4.439,
+      "distance_km": 687.8
+    }
+  ],
+  "demands": [],
+  "graph": {
+    "name": "abilene",
+    "source": "topohub",
+    "topohub_id": "topozoo/Abilene",
+    "num_demands": 0,
+    "avg_distance_km": 1006.1671428571426
+  }
+}

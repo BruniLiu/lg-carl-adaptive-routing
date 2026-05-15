@@ -1,0 +1,64 @@
+seed: 7
+
+topology:
+  name: nsfnet
+  path: data/topologies/nsfnet.json
+
+env:
+  episode_length: 8
+  k_paths: 4
+  traffic_pattern: uniform
+  min_demand: 1.0
+  max_demand: 8.0
+  queue_decay: 0.85
+  service_factor: 0.20
+  delay_kappa: 2.0
+  queue_delay_mu: 0.05
+  failure_probability: 0.0
+  burst_probability: 0.10
+  hotspot_count: 3
+
+reward:
+  alpha_delay: 1.0
+  beta_loss: 2.0
+  gamma_congestion: 0.8
+  lambda_switch: 0.3
+  eta_risk: 0.5
+  invalid_penalty: 5.0
+  delay_ref: 40.0
+
+model:
+  input_dim: 7
+  hidden_dim: 16
+  gnn_layers: 2
+  dropout: 0.1
+  node_embedding_dim: 8
+  path_feature_dim: 7
+
+dqn:
+  gamma: 0.95
+  learning_rate: 0.0001
+  batch_size: 4
+  replay_buffer_size: 500
+  target_update_interval: 20
+  epsilon_start: 1.0
+  epsilon_end: 0.05
+  epsilon_decay_steps: 200
+  gradient_clip: 5.0
+
+train:
+  episodes: 3
+  max_steps_per_episode: 8
+  update_every: 1
+  log_path: results/curves/smoke_train_metrics.csv
+  checkpoint_path: results/smoke_lgcarl.pt
+  print_every: 1
+
+eval:
+  episodes: 2
+  methods:
+    - random_k
+    - shortest_path
+    - dynamic_shortest_path
+    - lgcarl
+  output_path: results/tables/smoke_eval_summary.csv

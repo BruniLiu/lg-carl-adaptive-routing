@@ -1,0 +1,978 @@
+{
+  "name": "nobel_germany",
+  "source": "topohub",
+  "topohub_id": "sndlib/nobel-germany",
+  "directed": false,
+  "nodes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "node_metadata": [
+    {
+      "id": 0,
+      "original_id": "0",
+      "name": "Hannover",
+      "pos": [
+        9.8,
+        52.39
+      ]
+    },
+    {
+      "id": 1,
+      "original_id": "1",
+      "name": "Frankfurt",
+      "pos": [
+        8.66,
+        50.14
+      ]
+    },
+    {
+      "id": 2,
+      "original_id": "10",
+      "name": "Karlsruhe",
+      "pos": [
+        8.41,
+        49.01
+      ]
+    },
+    {
+      "id": 3,
+      "original_id": "11",
+      "name": "Mannheim",
+      "pos": [
+        8.49,
+        49.49
+      ]
+    },
+    {
+      "id": 4,
+      "original_id": "12",
+      "name": "Essen",
+      "pos": [
+        7.0,
+        51.44
+      ]
+    },
+    {
+      "id": 5,
+      "original_id": "13",
+      "name": "Dortmund",
+      "pos": [
+        7.48,
+        51.51
+      ]
+    },
+    {
+      "id": 6,
+      "original_id": "14",
+      "name": "Duesseldorf",
+      "pos": [
+        6.78,
+        51.22
+      ]
+    },
+    {
+      "id": 7,
+      "original_id": "15",
+      "name": "Koeln",
+      "pos": [
+        7.01,
+        50.92
+      ]
+    },
+    {
+      "id": 8,
+      "original_id": "16",
+      "name": "Leipzig",
+      "pos": [
+        12.38,
+        51.34
+      ]
+    },
+    {
+      "id": 9,
+      "original_id": "2",
+      "name": "Hamburg",
+      "pos": [
+        10.08,
+        53.55
+      ]
+    },
+    {
+      "id": 10,
+      "original_id": "3",
+      "name": "Norden",
+      "pos": [
+        7.21,
+        53.6
+      ]
+    },
+    {
+      "id": 11,
+      "original_id": "4",
+      "name": "Bremen",
+      "pos": [
+        8.8,
+        53.08
+      ]
+    },
+    {
+      "id": 12,
+      "original_id": "5",
+      "name": "Berlin",
+      "pos": [
+        13.48,
+        52.52
+      ]
+    },
+    {
+      "id": 13,
+      "original_id": "6",
+      "name": "Muenchen",
+      "pos": [
+        11.55,
+        48.15
+      ]
+    },
+    {
+      "id": 14,
+      "original_id": "7",
+      "name": "Ulm",
+      "pos": [
+        9.99,
+        48.4
+      ]
+    },
+    {
+      "id": 15,
+      "original_id": "8",
+      "name": "Nuernberg",
+      "pos": [
+        11.08,
+        49.45
+      ]
+    },
+    {
+      "id": 16,
+      "original_id": "9",
+      "name": "Stuttgart",
+      "pos": [
+        9.12,
+        48.73
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 12,
+      "capacity": 200.0,
+      "base_delay": 2.2491,
+      "distance_km": 249.82
+    },
+    {
+      "source": 0,
+      "target": 11,
+      "capacity": 108.9325,
+      "base_delay": 1.5105,
+      "distance_km": 102.1
+    },
+    {
+      "source": 0,
+      "target": 5,
+      "capacity": 68.9734,
+      "base_delay": 1.9337,
+      "distance_km": 186.74
+    },
+    {
+      "source": 0,
+      "target": 1,
+      "capacity": 60.0,
+      "base_delay": 2.3126,
+      "distance_km": 262.53
+    },
+    {
+      "source": 0,
+      "target": 9,
+      "capacity": 140.4166,
+      "base_delay": 1.6519,
+      "distance_km": 130.38
+    },
+    {
+      "source": 0,
+      "target": 8,
+      "capacity": 92.5212,
+      "base_delay": 2.061,
+      "distance_km": 212.21
+    },
+    {
+      "source": 1,
+      "target": 7,
+      "capacity": 60.0,
+      "base_delay": 1.7269,
+      "distance_km": 145.38
+    },
+    {
+      "source": 1,
+      "target": 8,
+      "capacity": 175.1825,
+      "base_delay": 2.4693,
+      "distance_km": 293.85
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "capacity": 76.1325,
+      "base_delay": 1.3666,
+      "distance_km": 73.32
+    },
+    {
+      "source": 1,
+      "target": 15,
+      "capacity": 63.2111,
+      "base_delay": 1.9497,
+      "distance_km": 189.94
+    },
+    {
+      "source": 9,
+      "target": 12,
+      "capacity": 200.0,
+      "base_delay": 2.273,
+      "distance_km": 254.6
+    },
+    {
+      "source": 9,
+      "target": 11,
+      "capacity": 200.0,
+      "base_delay": 1.4991,
+      "distance_km": 99.83
+    },
+    {
+      "source": 10,
+      "target": 11,
+      "capacity": 200.0,
+      "base_delay": 1.6019,
+      "distance_km": 120.39
+    },
+    {
+      "source": 5,
+      "target": 10,
+      "capacity": 152.2456,
+      "base_delay": 2.1659,
+      "distance_km": 233.18
+    },
+    {
+      "source": 8,
+      "target": 12,
+      "capacity": 145.4545,
+      "base_delay": 1.7569,
+      "distance_km": 151.38
+    },
+    {
+      "source": 13,
+      "target": 15,
+      "capacity": 88.4956,
+      "base_delay": 1.7432,
+      "distance_km": 148.64
+    },
+    {
+      "source": 13,
+      "target": 14,
+      "capacity": 200.0,
+      "base_delay": 1.5939,
+      "distance_km": 118.78
+    },
+    {
+      "source": 14,
+      "target": 16,
+      "capacity": 176.9912,
+      "base_delay": 1.3691,
+      "distance_km": 73.81
+    },
+    {
+      "source": 8,
+      "target": 15,
+      "capacity": 83.8106,
+      "base_delay": 2.1477,
+      "distance_km": 229.53
+    },
+    {
+      "source": 15,
+      "target": 16,
+      "capacity": 84.2815,
+      "base_delay": 1.8184,
+      "distance_km": 163.68
+    },
+    {
+      "source": 2,
+      "target": 16,
+      "capacity": 200.0,
+      "base_delay": 1.3028,
+      "distance_km": 60.56
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "capacity": 133.5708,
+      "base_delay": 1.2685,
+      "distance_km": 53.7
+    },
+    {
+      "source": 4,
+      "target": 5,
+      "capacity": 116.0766,
+      "base_delay": 1.1707,
+      "distance_km": 34.15
+    },
+    {
+      "source": 4,
+      "target": 6,
+      "capacity": 200.0,
+      "base_delay": 1.1442,
+      "distance_km": 28.85
+    },
+    {
+      "source": 5,
+      "target": 7,
+      "capacity": 126.7695,
+      "base_delay": 1.3667,
+      "distance_km": 73.34
+    },
+    {
+      "source": 6,
+      "target": 7,
+      "capacity": 110.0715,
+      "base_delay": 1.1852,
+      "distance_km": 37.04
+    }
+  ],
+  "demands": [
+    {
+      "src": 12,
+      "dst": 11,
+      "demand": 4.0
+    },
+    {
+      "src": 12,
+      "dst": 5,
+      "demand": 4.0
+    },
+    {
+      "src": 12,
+      "dst": 6,
+      "demand": 4.0
+    },
+    {
+      "src": 12,
+      "dst": 4,
+      "demand": 4.0
+    },
+    {
+      "src": 12,
+      "dst": 1,
+      "demand": 12.0
+    },
+    {
+      "src": 12,
+      "dst": 9,
+      "demand": 8.0
+    },
+    {
+      "src": 12,
+      "dst": 0,
+      "demand": 8.0
+    },
+    {
+      "src": 12,
+      "dst": 2,
+      "demand": 2.0
+    },
+    {
+      "src": 12,
+      "dst": 7,
+      "demand": 4.0
+    },
+    {
+      "src": 12,
+      "dst": 8,
+      "demand": 14.0
+    },
+    {
+      "src": 12,
+      "dst": 3,
+      "demand": 2.0
+    },
+    {
+      "src": 12,
+      "dst": 13,
+      "demand": 4.0
+    },
+    {
+      "src": 12,
+      "dst": 15,
+      "demand": 4.0
+    },
+    {
+      "src": 12,
+      "dst": 16,
+      "demand": 6.0
+    },
+    {
+      "src": 12,
+      "dst": 14,
+      "demand": 4.0
+    },
+    {
+      "src": 11,
+      "dst": 5,
+      "demand": 2.0
+    },
+    {
+      "src": 11,
+      "dst": 6,
+      "demand": 2.0
+    },
+    {
+      "src": 11,
+      "dst": 4,
+      "demand": 2.0
+    },
+    {
+      "src": 11,
+      "dst": 1,
+      "demand": 6.0
+    },
+    {
+      "src": 11,
+      "dst": 9,
+      "demand": 6.0
+    },
+    {
+      "src": 11,
+      "dst": 0,
+      "demand": 6.0
+    },
+    {
+      "src": 11,
+      "dst": 2,
+      "demand": 2.0
+    },
+    {
+      "src": 11,
+      "dst": 7,
+      "demand": 2.0
+    },
+    {
+      "src": 11,
+      "dst": 8,
+      "demand": 4.0
+    },
+    {
+      "src": 11,
+      "dst": 3,
+      "demand": 2.0
+    },
+    {
+      "src": 11,
+      "dst": 13,
+      "demand": 2.0
+    },
+    {
+      "src": 11,
+      "dst": 15,
+      "demand": 2.0
+    },
+    {
+      "src": 11,
+      "dst": 16,
+      "demand": 2.0
+    },
+    {
+      "src": 11,
+      "dst": 14,
+      "demand": 2.0
+    },
+    {
+      "src": 5,
+      "dst": 6,
+      "demand": 8.0
+    },
+    {
+      "src": 5,
+      "dst": 4,
+      "demand": 8.0
+    },
+    {
+      "src": 5,
+      "dst": 1,
+      "demand": 10.0
+    },
+    {
+      "src": 5,
+      "dst": 9,
+      "demand": 4.0
+    },
+    {
+      "src": 5,
+      "dst": 0,
+      "demand": 6.0
+    },
+    {
+      "src": 5,
+      "dst": 2,
+      "demand": 2.0
+    },
+    {
+      "src": 5,
+      "dst": 7,
+      "demand": 6.0
+    },
+    {
+      "src": 5,
+      "dst": 8,
+      "demand": 6.0
+    },
+    {
+      "src": 5,
+      "dst": 3,
+      "demand": 2.0
+    },
+    {
+      "src": 5,
+      "dst": 13,
+      "demand": 4.0
+    },
+    {
+      "src": 5,
+      "dst": 15,
+      "demand": 2.0
+    },
+    {
+      "src": 5,
+      "dst": 16,
+      "demand": 4.0
+    },
+    {
+      "src": 5,
+      "dst": 14,
+      "demand": 2.0
+    },
+    {
+      "src": 6,
+      "dst": 4,
+      "demand": 10.0
+    },
+    {
+      "src": 6,
+      "dst": 1,
+      "demand": 12.0
+    },
+    {
+      "src": 6,
+      "dst": 9,
+      "demand": 4.0
+    },
+    {
+      "src": 6,
+      "dst": 0,
+      "demand": 6.0
+    },
+    {
+      "src": 6,
+      "dst": 2,
+      "demand": 2.0
+    },
+    {
+      "src": 6,
+      "dst": 7,
+      "demand": 12.0
+    },
+    {
+      "src": 6,
+      "dst": 8,
+      "demand": 6.0
+    },
+    {
+      "src": 6,
+      "dst": 3,
+      "demand": 2.0
+    },
+    {
+      "src": 6,
+      "dst": 13,
+      "demand": 4.0
+    },
+    {
+      "src": 6,
+      "dst": 15,
+      "demand": 4.0
+    },
+    {
+      "src": 6,
+      "dst": 16,
+      "demand": 4.0
+    },
+    {
+      "src": 6,
+      "dst": 14,
+      "demand": 2.0
+    },
+    {
+      "src": 4,
+      "dst": 1,
+      "demand": 8.0
+    },
+    {
+      "src": 4,
+      "dst": 9,
+      "demand": 4.0
+    },
+    {
+      "src": 4,
+      "dst": 0,
+      "demand": 4.0
+    },
+    {
+      "src": 4,
+      "dst": 2,
+      "demand": 2.0
+    },
+    {
+      "src": 4,
+      "dst": 7,
+      "demand": 6.0
+    },
+    {
+      "src": 4,
+      "dst": 8,
+      "demand": 4.0
+    },
+    {
+      "src": 4,
+      "dst": 3,
+      "demand": 2.0
+    },
+    {
+      "src": 4,
+      "dst": 13,
+      "demand": 2.0
+    },
+    {
+      "src": 4,
+      "dst": 15,
+      "demand": 2.0
+    },
+    {
+      "src": 4,
+      "dst": 16,
+      "demand": 4.0
+    },
+    {
+      "src": 4,
+      "dst": 14,
+      "demand": 2.0
+    },
+    {
+      "src": 1,
+      "dst": 9,
+      "demand": 12.0
+    },
+    {
+      "src": 1,
+      "dst": 0,
+      "demand": 14.0
+    },
+    {
+      "src": 1,
+      "dst": 2,
+      "demand": 4.0
+    },
+    {
+      "src": 1,
+      "dst": 7,
+      "demand": 12.0
+    },
+    {
+      "src": 1,
+      "dst": 8,
+      "demand": 18.0
+    },
+    {
+      "src": 1,
+      "dst": 3,
+      "demand": 10.0
+    },
+    {
+      "src": 1,
+      "dst": 13,
+      "demand": 10.0
+    },
+    {
+      "src": 1,
+      "dst": 10,
+      "demand": 50.0
+    },
+    {
+      "src": 1,
+      "dst": 15,
+      "demand": 10.0
+    },
+    {
+      "src": 1,
+      "dst": 16,
+      "demand": 14.0
+    },
+    {
+      "src": 1,
+      "dst": 14,
+      "demand": 8.0
+    },
+    {
+      "src": 9,
+      "dst": 0,
+      "demand": 10.0
+    },
+    {
+      "src": 9,
+      "dst": 2,
+      "demand": 2.0
+    },
+    {
+      "src": 9,
+      "dst": 7,
+      "demand": 4.0
+    },
+    {
+      "src": 9,
+      "dst": 8,
+      "demand": 8.0
+    },
+    {
+      "src": 9,
+      "dst": 3,
+      "demand": 2.0
+    },
+    {
+      "src": 9,
+      "dst": 13,
+      "demand": 4.0
+    },
+    {
+      "src": 9,
+      "dst": 15,
+      "demand": 4.0
+    },
+    {
+      "src": 9,
+      "dst": 16,
+      "demand": 4.0
+    },
+    {
+      "src": 9,
+      "dst": 14,
+      "demand": 4.0
+    },
+    {
+      "src": 0,
+      "dst": 2,
+      "demand": 2.0
+    },
+    {
+      "src": 0,
+      "dst": 7,
+      "demand": 6.0
+    },
+    {
+      "src": 0,
+      "dst": 8,
+      "demand": 10.0
+    },
+    {
+      "src": 0,
+      "dst": 3,
+      "demand": 4.0
+    },
+    {
+      "src": 0,
+      "dst": 13,
+      "demand": 4.0
+    },
+    {
+      "src": 0,
+      "dst": 15,
+      "demand": 4.0
+    },
+    {
+      "src": 0,
+      "dst": 16,
+      "demand": 6.0
+    },
+    {
+      "src": 0,
+      "dst": 14,
+      "demand": 4.0
+    },
+    {
+      "src": 2,
+      "dst": 7,
+      "demand": 2.0
+    },
+    {
+      "src": 2,
+      "dst": 8,
+      "demand": 2.0
+    },
+    {
+      "src": 2,
+      "dst": 3,
+      "demand": 2.0
+    },
+    {
+      "src": 2,
+      "dst": 13,
+      "demand": 2.0
+    },
+    {
+      "src": 2,
+      "dst": 15,
+      "demand": 2.0
+    },
+    {
+      "src": 2,
+      "dst": 16,
+      "demand": 4.0
+    },
+    {
+      "src": 2,
+      "dst": 14,
+      "demand": 2.0
+    },
+    {
+      "src": 7,
+      "dst": 8,
+      "demand": 6.0
+    },
+    {
+      "src": 7,
+      "dst": 3,
+      "demand": 2.0
+    },
+    {
+      "src": 7,
+      "dst": 13,
+      "demand": 4.0
+    },
+    {
+      "src": 7,
+      "dst": 15,
+      "demand": 4.0
+    },
+    {
+      "src": 7,
+      "dst": 16,
+      "demand": 4.0
+    },
+    {
+      "src": 7,
+      "dst": 14,
+      "demand": 4.0
+    },
+    {
+      "src": 8,
+      "dst": 3,
+      "demand": 4.0
+    },
+    {
+      "src": 8,
+      "dst": 13,
+      "demand": 8.0
+    },
+    {
+      "src": 8,
+      "dst": 15,
+      "demand": 6.0
+    },
+    {
+      "src": 8,
+      "dst": 16,
+      "demand": 8.0
+    },
+    {
+      "src": 8,
+      "dst": 14,
+      "demand": 6.0
+    },
+    {
+      "src": 3,
+      "dst": 13,
+      "demand": 2.0
+    },
+    {
+      "src": 3,
+      "dst": 15,
+      "demand": 2.0
+    },
+    {
+      "src": 3,
+      "dst": 16,
+      "demand": 4.0
+    },
+    {
+      "src": 3,
+      "dst": 14,
+      "demand": 2.0
+    },
+    {
+      "src": 13,
+      "dst": 15,
+      "demand": 6.0
+    },
+    {
+      "src": 13,
+      "dst": 16,
+      "demand": 6.0
+    },
+    {
+      "src": 13,
+      "dst": 14,
+      "demand": 6.0
+    },
+    {
+      "src": 15,
+      "dst": 16,
+      "demand": 6.0
+    },
+    {
+      "src": 15,
+      "dst": 14,
+      "demand": 4.0
+    },
+    {
+      "src": 16,
+      "dst": 14,
+      "demand": 8.0
+    }
+  ],
+  "graph": {
+    "name": "nobel_germany",
+    "source": "topohub",
+    "topohub_id": "sndlib/nobel-germany",
+    "num_demands": 121,
+    "avg_distance_km": 143.37423076923076
+  }
+}

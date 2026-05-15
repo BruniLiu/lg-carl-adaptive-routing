@@ -1,0 +1,597 @@
+{
+  "name": "polska",
+  "source": "topohub",
+  "topohub_id": "sndlib/polska",
+  "directed": false,
+  "nodes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "node_metadata": [
+    {
+      "id": 0,
+      "original_id": "0",
+      "name": "Gdansk",
+      "pos": [
+        18.6,
+        54.2
+      ]
+    },
+    {
+      "id": 1,
+      "original_id": "1",
+      "name": "Bydgoszcz",
+      "pos": [
+        17.9,
+        53.1
+      ]
+    },
+    {
+      "id": 2,
+      "original_id": "10",
+      "name": "Warsaw",
+      "pos": [
+        21.0,
+        52.2
+      ]
+    },
+    {
+      "id": 3,
+      "original_id": "11",
+      "name": "Wroclaw",
+      "pos": [
+        16.9,
+        51.1
+      ]
+    },
+    {
+      "id": 4,
+      "original_id": "2",
+      "name": "Kolobrzeg",
+      "pos": [
+        16.1,
+        54.2
+      ]
+    },
+    {
+      "id": 5,
+      "original_id": "3",
+      "name": "Katowice",
+      "pos": [
+        18.8,
+        50.3
+      ]
+    },
+    {
+      "id": 6,
+      "original_id": "4",
+      "name": "Krakow",
+      "pos": [
+        19.8,
+        50.0
+      ]
+    },
+    {
+      "id": 7,
+      "original_id": "5",
+      "name": "Bialystok",
+      "pos": [
+        23.1,
+        53.1
+      ]
+    },
+    {
+      "id": 8,
+      "original_id": "6",
+      "name": "Lodz",
+      "pos": [
+        19.4,
+        51.7
+      ]
+    },
+    {
+      "id": 9,
+      "original_id": "7",
+      "name": "Poznan",
+      "pos": [
+        16.8,
+        52.4
+      ]
+    },
+    {
+      "id": 10,
+      "original_id": "8",
+      "name": "Rzeszow",
+      "pos": [
+        21.9,
+        50.0
+      ]
+    },
+    {
+      "id": 11,
+      "original_id": "9",
+      "name": "Szczecin",
+      "pos": [
+        14.5,
+        53.4
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 2,
+      "capacity": 87.3999,
+      "base_delay": 2.3697,
+      "distance_km": 273.93
+    },
+    {
+      "source": 0,
+      "target": 4,
+      "capacity": 74.9064,
+      "base_delay": 1.8133,
+      "distance_km": 162.65
+    },
+    {
+      "source": 0,
+      "target": 7,
+      "capacity": 119.5219,
+      "base_delay": 2.6041,
+      "distance_km": 320.83
+    },
+    {
+      "source": 1,
+      "target": 4,
+      "capacity": 124.1722,
+      "base_delay": 1.8521,
+      "distance_km": 170.43
+    },
+    {
+      "source": 1,
+      "target": 9,
+      "capacity": 84.317,
+      "base_delay": 1.5373,
+      "distance_km": 107.45
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "capacity": 60.0,
+      "base_delay": 2.1594,
+      "distance_km": 231.88
+    },
+    {
+      "source": 4,
+      "target": 11,
+      "capacity": 101.7467,
+      "base_delay": 1.6885,
+      "distance_km": 137.71
+    },
+    {
+      "source": 5,
+      "target": 6,
+      "capacity": 89.1133,
+      "base_delay": 1.3935,
+      "distance_km": 78.7
+    },
+    {
+      "source": 5,
+      "target": 8,
+      "capacity": 191.5097,
+      "base_delay": 1.8064,
+      "distance_km": 161.28
+    },
+    {
+      "source": 3,
+      "target": 5,
+      "capacity": 103.4483,
+      "base_delay": 1.8036,
+      "distance_km": 160.72
+    },
+    {
+      "source": 6,
+      "target": 10,
+      "capacity": 117.624,
+      "base_delay": 1.7506,
+      "distance_km": 150.13
+    },
+    {
+      "source": 2,
+      "target": 6,
+      "capacity": 78.9474,
+      "base_delay": 2.2932,
+      "distance_km": 258.64
+    },
+    {
+      "source": 7,
+      "target": 10,
+      "capacity": 111.1111,
+      "base_delay": 2.7732,
+      "distance_km": 354.64
+    },
+    {
+      "source": 2,
+      "target": 7,
+      "capacity": 93.75,
+      "base_delay": 1.8675,
+      "distance_km": 173.49
+    },
+    {
+      "source": 2,
+      "target": 8,
+      "capacity": 64.2123,
+      "base_delay": 1.6149,
+      "distance_km": 122.98
+    },
+    {
+      "source": 3,
+      "target": 8,
+      "capacity": 125.0,
+      "base_delay": 1.9293,
+      "distance_km": 185.86
+    },
+    {
+      "source": 9,
+      "target": 11,
+      "capacity": 101.7639,
+      "base_delay": 1.951,
+      "distance_km": 190.21
+    },
+    {
+      "source": 3,
+      "target": 9,
+      "capacity": 72.1414,
+      "base_delay": 1.7238,
+      "distance_km": 144.76
+    }
+  ],
+  "demands": [
+    {
+      "src": 0,
+      "dst": 1,
+      "demand": 195.0
+    },
+    {
+      "src": 0,
+      "dst": 4,
+      "demand": 158.0
+    },
+    {
+      "src": 0,
+      "dst": 5,
+      "demand": 174.0
+    },
+    {
+      "src": 0,
+      "dst": 6,
+      "demand": 101.0
+    },
+    {
+      "src": 0,
+      "dst": 7,
+      "demand": 198.0
+    },
+    {
+      "src": 0,
+      "dst": 8,
+      "demand": 158.0
+    },
+    {
+      "src": 0,
+      "dst": 9,
+      "demand": 182.0
+    },
+    {
+      "src": 0,
+      "dst": 10,
+      "demand": 154.0
+    },
+    {
+      "src": 0,
+      "dst": 11,
+      "demand": 175.0
+    },
+    {
+      "src": 0,
+      "dst": 2,
+      "demand": 122.0
+    },
+    {
+      "src": 0,
+      "dst": 3,
+      "demand": 114.0
+    },
+    {
+      "src": 1,
+      "dst": 4,
+      "demand": 179.0
+    },
+    {
+      "src": 1,
+      "dst": 5,
+      "demand": 117.0
+    },
+    {
+      "src": 1,
+      "dst": 6,
+      "demand": 105.0
+    },
+    {
+      "src": 1,
+      "dst": 7,
+      "demand": 159.0
+    },
+    {
+      "src": 1,
+      "dst": 8,
+      "demand": 198.0
+    },
+    {
+      "src": 1,
+      "dst": 9,
+      "demand": 189.0
+    },
+    {
+      "src": 1,
+      "dst": 10,
+      "demand": 166.0
+    },
+    {
+      "src": 1,
+      "dst": 11,
+      "demand": 142.0
+    },
+    {
+      "src": 1,
+      "dst": 2,
+      "demand": 137.0
+    },
+    {
+      "src": 1,
+      "dst": 3,
+      "demand": 163.0
+    },
+    {
+      "src": 4,
+      "dst": 5,
+      "demand": 131.0
+    },
+    {
+      "src": 4,
+      "dst": 6,
+      "demand": 159.0
+    },
+    {
+      "src": 4,
+      "dst": 7,
+      "demand": 164.0
+    },
+    {
+      "src": 4,
+      "dst": 8,
+      "demand": 128.0
+    },
+    {
+      "src": 4,
+      "dst": 9,
+      "demand": 195.0
+    },
+    {
+      "src": 4,
+      "dst": 10,
+      "demand": 130.0
+    },
+    {
+      "src": 4,
+      "dst": 11,
+      "demand": 105.0
+    },
+    {
+      "src": 4,
+      "dst": 2,
+      "demand": 173.0
+    },
+    {
+      "src": 4,
+      "dst": 3,
+      "demand": 157.0
+    },
+    {
+      "src": 5,
+      "dst": 6,
+      "demand": 194.0
+    },
+    {
+      "src": 5,
+      "dst": 7,
+      "demand": 125.0
+    },
+    {
+      "src": 5,
+      "dst": 8,
+      "demand": 110.0
+    },
+    {
+      "src": 5,
+      "dst": 9,
+      "demand": 132.0
+    },
+    {
+      "src": 5,
+      "dst": 10,
+      "demand": 159.0
+    },
+    {
+      "src": 5,
+      "dst": 11,
+      "demand": 109.0
+    },
+    {
+      "src": 5,
+      "dst": 2,
+      "demand": 126.0
+    },
+    {
+      "src": 5,
+      "dst": 3,
+      "demand": 100.0
+    },
+    {
+      "src": 6,
+      "dst": 7,
+      "demand": 124.0
+    },
+    {
+      "src": 6,
+      "dst": 8,
+      "demand": 106.0
+    },
+    {
+      "src": 6,
+      "dst": 9,
+      "demand": 136.0
+    },
+    {
+      "src": 6,
+      "dst": 10,
+      "demand": 144.0
+    },
+    {
+      "src": 6,
+      "dst": 11,
+      "demand": 168.0
+    },
+    {
+      "src": 6,
+      "dst": 2,
+      "demand": 119.0
+    },
+    {
+      "src": 6,
+      "dst": 3,
+      "demand": 127.0
+    },
+    {
+      "src": 7,
+      "dst": 8,
+      "demand": 105.0
+    },
+    {
+      "src": 7,
+      "dst": 9,
+      "demand": 147.0
+    },
+    {
+      "src": 7,
+      "dst": 10,
+      "demand": 140.0
+    },
+    {
+      "src": 7,
+      "dst": 11,
+      "demand": 198.0
+    },
+    {
+      "src": 7,
+      "dst": 2,
+      "demand": 104.0
+    },
+    {
+      "src": 7,
+      "dst": 3,
+      "demand": 113.0
+    },
+    {
+      "src": 8,
+      "dst": 9,
+      "demand": 169.0
+    },
+    {
+      "src": 8,
+      "dst": 10,
+      "demand": 187.0
+    },
+    {
+      "src": 8,
+      "dst": 11,
+      "demand": 196.0
+    },
+    {
+      "src": 8,
+      "dst": 2,
+      "demand": 193.0
+    },
+    {
+      "src": 8,
+      "dst": 3,
+      "demand": 151.0
+    },
+    {
+      "src": 9,
+      "dst": 10,
+      "demand": 106.0
+    },
+    {
+      "src": 9,
+      "dst": 11,
+      "demand": 125.0
+    },
+    {
+      "src": 9,
+      "dst": 2,
+      "demand": 194.0
+    },
+    {
+      "src": 9,
+      "dst": 3,
+      "demand": 194.0
+    },
+    {
+      "src": 10,
+      "dst": 11,
+      "demand": 123.0
+    },
+    {
+      "src": 10,
+      "dst": 2,
+      "demand": 181.0
+    },
+    {
+      "src": 10,
+      "dst": 3,
+      "demand": 193.0
+    },
+    {
+      "src": 11,
+      "dst": 2,
+      "demand": 181.0
+    },
+    {
+      "src": 11,
+      "dst": 3,
+      "demand": 195.0
+    },
+    {
+      "src": 2,
+      "dst": 3,
+      "demand": 141.0
+    }
+  ],
+  "graph": {
+    "name": "polska",
+    "source": "topohub",
+    "topohub_id": "sndlib/polska",
+    "num_demands": 66,
+    "avg_distance_km": 188.12722222222223
+  }
+}

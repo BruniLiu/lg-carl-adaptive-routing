@@ -1,0 +1,32 @@
+{
+  "name": "nsfnet-like",
+  "directed": false,
+  "nodes": [
+    0, 1, 2, 3, 4, 5, 6,
+    7, 8, 9, 10, 11, 12, 13
+  ],
+  "edges": [
+    {"source": 0, "target": 1, "capacity": 60, "base_delay": 4},
+    {"source": 0, "target": 2, "capacity": 80, "base_delay": 3},
+    {"source": 0, "target": 3, "capacity": 55, "base_delay": 5},
+    {"source": 1, "target": 2, "capacity": 65, "base_delay": 2},
+    {"source": 1, "target": 7, "capacity": 50, "base_delay": 8},
+    {"source": 2, "target": 5, "capacity": 70, "base_delay": 4},
+    {"source": 3, "target": 4, "capacity": 60, "base_delay": 2},
+    {"source": 3, "target": 9, "capacity": 50, "base_delay": 7},
+    {"source": 4, "target": 5, "capacity": 75, "base_delay": 3},
+    {"source": 4, "target": 6, "capacity": 55, "base_delay": 4},
+    {"source": 5, "target": 8, "capacity": 80, "base_delay": 5},
+    {"source": 5, "target": 12, "capacity": 45, "base_delay": 7},
+    {"source": 6, "target": 7, "capacity": 65, "base_delay": 2},
+    {"source": 7, "target": 10, "capacity": 70, "base_delay": 3},
+    {"source": 8, "target": 9, "capacity": 60, "base_delay": 2},
+    {"source": 8, "target": 11, "capacity": 70, "base_delay": 4},
+    {"source": 9, "target": 10, "capacity": 55, "base_delay": 3},
+    {"source": 9, "target": 13, "capacity": 45, "base_delay": 6},
+    {"source": 10, "target": 11, "capacity": 60, "base_delay": 2},
+    {"source": 11, "target": 12, "capacity": 70, "base_delay": 3},
+    {"source": 12, "target": 13, "capacity": 65, "base_delay": 2}
+  ]
+}
+

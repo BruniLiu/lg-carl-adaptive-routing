@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lgcarl"
+version = "0.1.0"
+description = "Line-Graph Congestion-Aware Reinforcement Learning for Adaptive Routing"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "torch>=2.1",
+  "numpy>=1.24",
+  "networkx>=3.0",
+  "PyYAML>=6.0",
+  "pandas>=2.0",
+  "matplotlib>=3.7",
+  "seaborn>=0.13",
+  "tqdm>=4.66",
+  "rich>=13.0",
+  "gymnasium>=0.29",
+  "topohub>=1.5.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+include = ["lgcarl*"]

@@ -1,0 +1,60 @@
+seed: 7
+topology:
+  name: topohub
+  topohub_id: sndlib/polska
+  cache_path: data/topologies/sndlib_polska.json
+  capacity_scale: 1.0
+env:
+  episode_length: 300
+  k_paths: 5
+  traffic_pattern: real
+  normalize_real_demands: true
+  min_demand: 25.0
+  max_demand: 90.0
+  queue_decay: 0.95
+  service_factor: 0.03
+  delay_kappa: 2.0
+  queue_delay_mu: 0.05
+  failure_probability: 0.0
+  burst_probability: 0.1
+  hotspot_count: 3
+reward:
+  alpha_delay: 1.0
+  beta_loss: 4.0
+  gamma_congestion: 2.0
+  lambda_switch: 0.3
+  eta_risk: 0.5
+  invalid_penalty: 5.0
+  delay_ref: 15.0
+model:
+  input_dim: 7
+  hidden_dim: 64
+  gnn_layers: 2
+  dropout: 0.1
+  node_embedding_dim: 16
+  path_feature_dim: 7
+dqn:
+  gamma: 0.95
+  learning_rate: 0.0001
+  batch_size: 64
+  replay_buffer_size: 50000
+  target_update_interval: 500
+  epsilon_start: 1.0
+  epsilon_end: 0.05
+  epsilon_decay_steps: 20000
+  gradient_clip: 5.0
+train:
+  episodes: 300
+  max_steps_per_episode: 300
+  update_every: 4
+  log_path: results/curves/real_sndlib_polska_congested_300_train_metrics.csv
+  checkpoint_path: results/real_sndlib_polska_congested_300_lgcarl.pt
+  print_every: 10
+eval:
+  episodes: 20
+  methods:
+  - random_k
+  - shortest_path
+  - dynamic_shortest_path
+  - lgcarl
+  output_path: results/tables/real_sndlib_polska_congested_300_eval_summary.csv
