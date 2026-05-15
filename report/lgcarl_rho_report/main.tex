@@ -12,7 +12,7 @@
 % Title
 %----------------------------------------------------------
 
-\doctype{Experiment Report}
+\doctype{Research Article}
 \title{LG-CARL: Line-Graph Congestion-Aware Reinforcement Learning for Adaptive Routing}
 
 %----------------------------------------------------------
@@ -74,6 +74,44 @@ This report presents LG-CARL, a congestion-aware adaptive routing system that co
 本项目的核心思想是将原始网络拓扑转换为 directed line graph。原图中的一条有向链路在 line graph 中成为一个节点；如果两条有向链路可以连续转发，则在 line graph 中连接它们。这样，GNN 的消息传递发生在链路状态之间，而不是只发生在路由器节点之间。由于拥塞本质上更接近链路级现象，例如链路利用率、队列长度、丢包率和链路延迟，因此 line graph 表示更适合表达路由决策所需的动态状态。
 
 项目目标不是证明模型在所有场景下都优于传统启发式方法，而是实现一个完整、可运行、可解释的 GNN + RL 路由实验框架。该框架包括网络仿真器、候选路径生成、Line-Graph GraphSAGE 编码器、path-level DQN、baseline 对比、实验结果表格和可视化 GIF。
+
+\subsection*{贡献}
+\addcontentsline{toc}{subsection}{贡献}
+
+本文主要贡献如下：
+
+\begin{itemize}
+    \item 提出并实现一个以链路为中心的自适应路由实验系统，将 directed line graph 表示、GraphSAGE 编码器和 DQN 路径选择结合起来。
+    \item 构建轻量网络仿真器，能够模拟链路负载、队列、利用率、时延、丢包和服务衰减过程。
+    \item 提供 Random-K、Shortest Path 和 Dynamic Shortest Path baseline，用于定量比较学习式路由策略。
+    \item 在 NSFNet-like 拓扑和 SNDlib Polska 真实拓扑上进行常规流量和拥塞流量实验，并给出可视化 replay 分析。
+\end{itemize}
+
+\section{相关工作}
+
+\subsection{传统路由与流量工程}
+
+早期互联网路由协议主要依赖分布式控制和静态或半静态链路代价。RIP \cite{hedrick1988rip} 和 OSPF \cite{moy1998ospf} 代表了经典的距离向量和链路状态路由协议，ECMP \cite{hopps2000ecmp} 进一步通过等价路径分摊流量。MPLS \cite{rosen2001mpls} 和 RSVP-TE \cite{awduche2001rsvp} 则为显式路径控制和流量工程提供了协议基础。这些机制稳定、可解释且工程成熟，但通常需要人工配置权重或策略，对快速变化的负载和拥塞状态适应能力有限。
+
+为了提升网络资源利用率，流量工程研究开始从单纯最短路转向全局优化。Fortz 和 Thorup 研究了通过优化 OSPF 权重实现 Internet traffic engineering \cite{fortz2000internet,fortz2002traffic}；Applegate 等研究了在流量矩阵变化和不确定性下的鲁棒 intra-domain routing \cite{appelgate2003making}；Roughan 等对骨干网流量变化进行了测量建模 \cite{roughan2002experience}；Kandula 等进一步讨论了响应性和稳定性之间的权衡 \cite{kandula2005walking}。这些工作说明路由优化不仅要考虑最短路径，还要考虑负载均衡、鲁棒性和稳定性。
+
+SDN 进一步将路由控制从分布式协议推向集中式、可编程控制。OpenFlow \cite{mckeown2008openflow}、DevoFlow \cite{curtis2011devoflow}、Hedera \cite{alfares2010hedera}、Google B4 \cite{jain2013b4} 和 SWAN \cite{hong2013swan} 展示了集中式控制在数据中心和广域网中的潜力。Kreutz 等 \cite{kreutz2015sdn} 和 Akyildiz 等 \cite{akyildiz2014roadmap} 对 SDN 架构和流量工程进行了系统综述。与这些优化和控制平面工作相比，LG-CARL 关注的是在一个可控仿真环境中学习候选路径选择策略，并通过 reward 将拥塞、丢包和稳定性纳入统一目标。
+
+\subsection{强化学习路由与学习式网络控制}
+
+强化学习为动态路由提供了一种无需显式解析模型的自适应优化思路。Q-learning \cite{watkins1992qlearning} 和现代强化学习框架 \cite{sutton2018reinforcement} 为此类方法奠定了理论基础。Boyan 和 Littman 的 Q-routing \cite{boyan1993packet} 是较早将强化学习用于动态网络路由的代表性工作；Ant-based routing \cite{schoonderwoerd1996ant,dicaro1998antnet} 则从群体智能角度探索了自适应路径选择。深度学习兴起后，DQN \cite{mnih2015human}、Double DQN \cite{vanhasselt2016deep}、Prioritized Experience Replay \cite{schaul2016prioritized} 和 Dueling Network \cite{wang2016dueling} 使基于值函数的控制能够处理更复杂的状态空间。
+
+学习式网络控制也被用于资源管理、拥塞控制、视频传输和流量工程。DeepRM \cite{mao2016resource} 通过深度强化学习学习资源调度；Pensieve \cite{mao2017neural} 将 RL 用于自适应码率控制；Aurora \cite{jay2019deep} 和 Classic Meets Modern \cite{abbasloo2020classic} 探索了学习式拥塞控制；Valadarsky 等 \cite{valadarsky2017learning} 和 Xu 等 \cite{xu2018experience} 则讨论了深度强化学习在路由和网络控制中的应用。与这些工作相比，本项目使用强化学习学习 path-level 选择，但强调 line graph 表示，使链路级拥塞状态成为策略输入的核心。
+
+\subsection{图神经网络与网络建模}
+
+图神经网络为处理拓扑结构数据提供了通用工具。Scarselli 等 \cite{scarselli2009gnn} 提出了早期 GNN 框架，随后 GCN \cite{kipf2017semi}、GraphSAGE \cite{hamilton2017inductive}、GAT \cite{velickovic2018graph}、MPNN \cite{gilmer2017mpnn} 和 GIN \cite{xu2019powerful} 推动了图表示学习的发展。Battaglia 等 \cite{battaglia2018relational} 从 relational inductive bias 角度总结了 graph networks 的表达能力。这些工作共同说明，当问题天然具有图结构时，显式利用拓扑关系通常比普通 MLP 更有归纳偏置。
+
+通信网络是 GNN 的自然应用场景。RouteNet \cite{rusek2020routenet} 证明 GNN 可以建模拓扑、路由和流量之间的关系，并预测 delay、jitter 和 loss 等网络 KPI。RouteNet-Fermi \cite{suarezvarela2022routenetfermi} 进一步提升了网络性能建模能力。Suarez-Varela 等 \cite{suarezvarela2022graph} 系统总结了 GNN 在通信网络中的应用场景和机会；IGNNITION \cite{pujolperich2021ignnition} 则试图降低网络系统中构建 GNN 原型的门槛。Almasan 等 \cite{almasan2019deep} 将 GNN 与 DRL agent 结合，用于提升路由优化在不同拓扑上的泛化能力；Abrol 等 \cite{abrol2024deep} 使用 DGCNN 和 DQN 进行自适应流量路由。这些研究与 LG-CARL 最为接近，但本项目采用 directed line graph，使 GNN 的节点直接对应链路而非路由器，从而更强调链路拥塞状态的传播建模。
+
+\subsection{与本工作的关系}
+
+综上，传统流量工程提供了强 baseline 和可解释优化目标，强化学习提供了动态决策框架，GNN 提供了拓扑泛化和结构表示能力。LG-CARL 将这三条线索结合：用 line graph 表示链路级状态，用 GraphSAGE 学习链路嵌入，用 DQN 在候选路径集合上进行决策。与完全端到端的黑盒路由不同，本项目保留了 k-shortest candidate paths，使动作空间可控且便于可视化解释；与传统 shortest path 相比，它能够将拥塞、丢包和切换稳定性纳入学习目标。
 
 \section{方法}
 
@@ -258,6 +296,44 @@ The key idea of this project is to represent the network as a directed line grap
 
 The goal of the project is not to claim that the learned policy dominates all routing heuristics in every setting. Instead, it aims to provide a complete, runnable, and interpretable GNN + RL routing framework. The framework includes a network simulator, candidate path generation, a Line-Graph GraphSAGE encoder, a path-level DQN agent, baseline comparisons, quantitative tables, and route replay visualizations.
 
+\subsection*{Contributions}
+\addcontentsline{toc}{subsection}{Contributions}
+
+The main contributions are:
+
+\begin{itemize}
+    \item We implement a link-centric adaptive routing system that combines directed line-graph representation, a GraphSAGE encoder, and DQN-based path selection.
+    \item We build a lightweight simulator that updates link load, queue, utilization, delay, loss, and service decay.
+    \item We include Random-K, Shortest Path, and Dynamic Shortest Path baselines for quantitative comparison.
+    \item We evaluate the system on an NSFNet-like topology and the SNDlib Polska topology under both regular and congested traffic, with route replay visualizations for interpretation.
+\end{itemize}
+
+\section{Related Work}
+
+\subsection{Classical Routing and Traffic Engineering}
+
+Early Internet routing protocols rely on distributed control and static or semi-static link costs. RIP \cite{hedrick1988rip} and OSPF \cite{moy1998ospf} are representative distance-vector and link-state protocols, while ECMP \cite{hopps2000ecmp} distributes traffic over equal-cost paths. MPLS \cite{rosen2001mpls} and RSVP-TE \cite{awduche2001rsvp} provide protocol-level support for explicit path control and traffic engineering. These mechanisms are stable, interpretable, and mature, but they often require manually configured weights or policies and may adapt slowly to rapidly changing load.
+
+Traffic engineering research moved beyond pure shortest-path routing toward global optimization. Fortz and Thorup studied OSPF weight optimization for Internet traffic engineering \cite{fortz2000internet,fortz2002traffic}. Applegate et al. investigated robust intra-domain routing under changing and uncertain traffic matrices \cite{appelgate2003making}. Roughan et al. measured and modeled backbone traffic variability \cite{roughan2002experience}, and Kandula et al. studied the trade-off between responsiveness and stability \cite{kandula2005walking}. These works show that routing optimization must account for load balancing, robustness, and stability, not merely path length.
+
+Software-defined networking further pushed routing control toward centralized and programmable systems. OpenFlow \cite{mckeown2008openflow}, DevoFlow \cite{curtis2011devoflow}, Hedera \cite{alfares2010hedera}, Google B4 \cite{jain2013b4}, and SWAN \cite{hong2013swan} demonstrate the potential of centralized control in data-center and wide-area networks. Kreutz et al. \cite{kreutz2015sdn} and Akyildiz et al. \cite{akyildiz2014roadmap} provide broader surveys of SDN architectures and traffic engineering. Compared with these optimization and control-plane systems, LG-CARL focuses on learning a candidate-path selection policy in a controllable simulator, using reward terms to combine congestion, loss, and routing stability.
+
+\subsection{Reinforcement Learning for Routing and Network Control}
+
+Reinforcement learning provides an adaptive optimization framework that does not require a fully specified analytic model of the network. Q-learning \cite{watkins1992qlearning} and the general RL framework \cite{sutton2018reinforcement} form the foundation for such methods. Q-routing by Boyan and Littman \cite{boyan1993packet} is one of the earliest examples of reinforcement learning for dynamic packet routing. Ant-based routing \cite{schoonderwoerd1996ant,dicaro1998antnet} explored adaptive path selection from a swarm-intelligence perspective. With deep learning, DQN \cite{mnih2015human}, Double DQN \cite{vanhasselt2016deep}, Prioritized Experience Replay \cite{schaul2016prioritized}, and Dueling Networks \cite{wang2016dueling} made value-based control more suitable for high-dimensional states.
+
+Learning-based network control has also been applied to resource management, congestion control, adaptive video streaming, and traffic engineering. DeepRM \cite{mao2016resource} uses deep reinforcement learning for resource scheduling. Pensieve \cite{mao2017neural} applies RL to adaptive bitrate streaming. Aurora \cite{jay2019deep} and Classic Meets Modern \cite{abbasloo2020classic} explore learning-based congestion control. Valadarsky et al. \cite{valadarsky2017learning} and Xu et al. \cite{xu2018experience} discuss deep reinforcement learning for routing and network control. LG-CARL follows this learning-based direction but emphasizes line-graph state representation, making link-level congestion the central policy input.
+
+\subsection{Graph Neural Networks and Network Modeling}
+
+Graph neural networks provide a general framework for learning from topological data. Scarselli et al. \cite{scarselli2009gnn} introduced an early GNN formulation. Later models such as GCN \cite{kipf2017semi}, GraphSAGE \cite{hamilton2017inductive}, GAT \cite{velickovic2018graph}, MPNN \cite{gilmer2017mpnn}, and GIN \cite{xu2019powerful} advanced graph representation learning. Battaglia et al. \cite{battaglia2018relational} summarized graph networks from the perspective of relational inductive bias. These works show that when a problem is naturally graph-structured, explicitly exploiting topology can provide a useful inductive bias compared with plain MLPs.
+
+Communication networks are a natural application domain for GNNs. RouteNet \cite{rusek2020routenet} showed that GNNs can model the relationship among topology, routing, and traffic and predict network KPIs such as delay, jitter, and loss. RouteNet-Fermi \cite{suarezvarela2022routenetfermi} further improved GNN-based network performance modeling. Suarez-Varela et al. \cite{suarezvarela2022graph} surveyed opportunities for GNNs in communication networks, and IGNNITION \cite{pujolperich2021ignnition} lowered the barrier to prototyping GNNs for networking systems. Almasan et al. \cite{almasan2019deep} combined GNNs with a DRL agent to improve routing optimization across different topologies, while Abrol et al. \cite{abrol2024deep} used DGCNN and DQN for adaptive traffic routing. LG-CARL is closest to this line of work, but it uses a directed line graph so that GNN nodes directly correspond to links rather than routers, emphasizing link-level congestion propagation.
+
+\subsection{Position of This Work}
+
+Overall, classical traffic engineering provides strong baselines and interpretable objectives, reinforcement learning provides a dynamic decision-making framework, and GNNs provide topology-aware representation learning. LG-CARL combines these directions: it represents link-level state with a line graph, learns link embeddings with GraphSAGE, and uses DQN to select among candidate paths. Unlike fully black-box routing, it preserves k-shortest candidate paths, keeping the action space controlled and visualizable. Unlike pure shortest-path routing, it can include congestion, loss, and switching stability in the learning objective.
+
 \section{Method}
 
 \subsection{Network State Modeling}
@@ -415,7 +491,7 @@ Overall, LG-CARL is a complete course-scale project. It includes a clear problem
 \section*{Acknowledgment}
 \addcontentsline{toc}{section}{Acknowledgment}
 
-The implementation and experiments were developed as a course project. The design is inspired by earlier work on Q-routing, graph neural network based network modeling, and deep reinforcement learning for control and routing \cite{boyan1993packet,rusek2019routenet,almasan2019deep,mnih2015human,hamilton2017inductive}.
+The implementation and experiments were developed as a course project. The design is inspired by earlier work on Q-routing, graph neural network based network modeling, and deep reinforcement learning for control and routing \cite{boyan1993packet,rusek2020routenet,almasan2019deep,mnih2015human,hamilton2017inductive}.
 
 \printbibliography
 

@@ -377,14 +377,14 @@
     {\color{rhocolor}\sffamily\large\bfseries}
     {\thesection.}
     {0.5em}
-    {\MakeUppercase{#1}}
+    {#1}
     []
 
 \titleformat{name=\section,numberless}[block]
     {\color{rhocolor}\sffamily\large\bfseries}
     {}
     {0em}
-    {\tikz\draw[rhocolor, fill=rhocolor] (0,0) rectangle (1.25ex, 1.25ex); \hspace{2.5pt}{\MakeUppercase{#1}}}
+    {\tikz\draw[rhocolor, fill=rhocolor] (0,0) rectangle (1.25ex, 1.25ex); \hspace{2.5pt}{#1}}
     []
   
 \titleformat{\subsection}[block]
