@@ -157,20 +157,6 @@ The scripts automatically use CUDA when a compatible NVIDIA GPU is available. To
 
 ## Quick Start
 
-Run tests:
-
-```bash
-pytest -q
-```
-
-Run a smoke experiment:
-
-```bash
-python scripts/train_lgcarl.py --config configs/smoke.yaml
-python scripts/eval_all.py --config configs/smoke.yaml
-python scripts/plot_results.py --config configs/smoke.yaml
-```
-
 Run the default NSFNet-like experiment:
 
 ```bash
@@ -257,14 +243,12 @@ lgcarl/graph/                 Topology utilities, line graph, path generation, f
 lgcarl/models/                Line-Graph GraphSAGE and path Q-network
 lgcarl/rl/                    DQN agent, replay buffer, epsilon scheduler
 scripts/                      Training, evaluation, plotting, and GIF generation entrypoints
-tests/                        Smoke tests for graph, environment, and agent behavior
 ```
 
 ## Configuration Files
 
 Important configs:
 
-- `configs/smoke.yaml`: Small quick-run config for checking that the pipeline works.
 - `configs/default.yaml`: NSFNet-like topology with synthetic uniform traffic.
 - `configs/real_sndlib_polska.yaml`: SNDlib Polska topology with normalized real demand matrix.
 - `configs/real_sndlib_polska_congested_300.yaml`: Heavier traffic and slower service for congestion stress testing.
@@ -358,4 +342,3 @@ This project is inspired by several lines of work:
 - DQN-style value learning with replay buffers and target networks.
 
 The implementation here is designed to be readable, runnable, and easy to extend for a networking or machine-learning course project.
-

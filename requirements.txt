@@ -9,5 +9,4 @@ pillow>=10.0
 tqdm>=4.66
 rich>=13.0
 gymnasium>=0.29
-pytest>=8.0
 topohub>=1.5.1
